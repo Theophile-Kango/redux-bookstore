@@ -7,7 +7,7 @@ The front-end of an application that can help to organize and manage the booksto
 
 ## Live Demo
 
-[Click here](https://reactjs-simple-calculator.netlify.app/)
+[Click here](https://redux-bookstore.netlify.app/)
 
 
 ## Getting Started
