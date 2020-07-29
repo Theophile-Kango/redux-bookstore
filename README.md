@@ -3,15 +3,18 @@
 
 ## Redux Bookstore
 
-In the project directory, you can run:
+The front-end of an application that can help to organize and manage the bookstore. It is fast, dynamic and responsive to actions and build with React & Redux.
 
-### `npm start`
+## Live Demo
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Click here](https://reactjs-simple-calculator.netlify.app/)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+
+## Getting Started
+- Clone the project to your local machine;
+- cd into the project directory;
+- Run `npm install` to install the necessary modules;
+- Run `npm start`, the page will automatically load on localhost:3000.
 
 ### `npm test`
 
@@ -28,3 +31,34 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+
+## Built With
+
+- Node.js
+- React
+- Redux
+- npm
+- CSS
+- ES6
+And deploy to netlify
+
+### Install
+
+- Install VSCode or any code editor you like
+
+## Authors
+
+👤  **Theophile Kango**
+
+- Github: [@githubhandle](https://github.com/Theophile-Kango)
+- Twitter: [@twitterhandle](https://twitter.com/Theophadh)
+- Linkedin: [linkedin](https://www.linkedin.com/in/theophile-kango)
+
+## 🤝  Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Theophile-Kango/react-calculator/issues)
+## Show your support
+
+Give a ⭐️  if you like this project!
