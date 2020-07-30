@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import Book from './Book';
 class BooksList extends Component{
     render(){
         return(
@@ -12,11 +12,7 @@ class BooksList extends Component{
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Book 1</td>
-                        <td>Learning</td>
-                    </tr> 
+                    <Book id="1" title="Book" category="simple book"/>
                 </tbody>
             </table>
         )
