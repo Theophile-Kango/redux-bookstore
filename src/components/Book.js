@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Book({ id, title, category, removeBook }) {
+export default function Book({
+  id, title, category, removeBook,
+}) {
   return (
     <tr>
       <td>{id}</td>
@@ -16,6 +18,5 @@ Book.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  removeBook: PropTypes.func.isRequired
+  removeBook: PropTypes.func.isRequired,
 };
-

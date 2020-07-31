@@ -1,27 +1,29 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
-import { createBook } from './../actions/index';
+import { createBook } from '../actions/index';
 
-class BooksForm extends Component{
-  constructor(props){
+class BooksForm extends Component {
+  constructor(props) {
     super(props);
     this.state = {
       title: '',
-      category: ''
-    }
+      category: '',
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange = (event) => {
+  handleChange(event) {
     event.preventDefault();
-    const {name, value} = event.target;
-    this.setState({[name]: value});
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
   }
 
-  handleSubmit = (e) => {
+  handleSubmit(e) {
     e.preventDefault();
     const { title, category } = this.state;
     const { createBook } = this.props;
@@ -29,38 +31,38 @@ class BooksForm extends Component{
       id: uuidv4(),
       title,
       category,
-    }
+    };
 
     if (title && category) {
       createBook(book);
-      this.setState({ 
+      this.setState({
         title: '',
-        category: '' 
+        category: '',
       });
-      
     }
   }
-  
-  render(){
+
+  render() {
     const options = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+    const { title, category } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="title">Book Title</label>
-        <input 
-          id="title" 
-          name="title" 
-          type="text" 
+        <input
+          id="title"
+          name="title"
+          type="text"
           placeholder="book title"
-          value={this.state.title}
-          onChange={this.handleChange} 
+          value={title}
+          onChange={this.handleChange}
         />
         <br />
         <label htmlFor="category">Categories</label>
-        <select 
+        <select
           id="category"
-          name="category" 
+          name="category"
           onChange={this.handleChange}
-          value={this.state.category}
+          value={category}
         >
           <option>--Chose a Category--</option>
           {options.map(option => (<option value={option} key={option}>{option}</option>))}
@@ -71,7 +73,6 @@ class BooksForm extends Component{
     );
   }
 }
-
 
 BooksForm.propTypes = {
   createBook: PropTypes.func.isRequired,

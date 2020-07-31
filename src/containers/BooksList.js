@@ -18,13 +18,14 @@ function BooksList({ books, removeBook }) {
       <tbody>
         {
           books.map(book => (
-          <Book 
-            key={book.id}
-            id={book.id}
-            title={book.title}
-            category={book.category}
-            removeBook={removeBook} 
-          />))
+            <Book
+              key={book.id}
+              id={book.id}
+              title={book.title}
+              category={book.category}
+              removeBook={removeBook}
+            />
+          ))
         }
       </tbody>
     </table>
