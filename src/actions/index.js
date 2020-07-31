@@ -1,4 +1,4 @@
-import * as actions from './../reducers/actionTypes';
+import * as actions from '../reducers/actionTypes';
 
 export const createBook = book => ({
   type: actions.CREATE_BOOK,

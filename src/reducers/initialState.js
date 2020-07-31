@@ -1,4 +1,3 @@
-
 export const INITIAL_STATE = [
   { id: Math.round(1000 * Math.random()), title: 'Game of thrones', category: 'Action' },
   { id: Math.round(1000 * Math.random()), title: 'Life story', category: 'Biography' },

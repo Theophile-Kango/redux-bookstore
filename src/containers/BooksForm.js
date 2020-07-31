@@ -1,18 +1,20 @@
-import React, { Component } from 'react'
+/* eslint-disable jsx-a11y/label-has-associated-control */
 
-export default class BooksForm extends Component {
-    render() {
-        const options = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"]
-        return (
-            <form>
-                <label>Book Title</label>
-                <input type="text" placeholder="book title"/><br/>
-                <label>Categories</label>
-                <select>
-                    {options.map(option => (<option key={option}>{option}</option>))}
-                </select><br/>
-                <button type="submit">submit</button>
-            </form>
-        )
-    }
+import React from 'react';
+
+export default function BooksForm() {
+  const options = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+  return (
+    <form>
+      <label htmlFor="title">Book Title</label>
+      <input id="title" name="title" type="text" placeholder="book title" />
+      <br />
+      <label htmlFor="category">Categories</label>
+      <select id="category">
+        {options.map(option => (<option key={option}>{option}</option>))}
+      </select>
+      <br />
+      <button type="submit">submit</button>
+    </form>
+  );
 }

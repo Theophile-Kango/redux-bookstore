@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
-import INITIAL_STATE from './initialState';
+import initialState from './initialState';
 
-const books = (state = INITIAL_STATE, action) => {
+const books = (state = initialState, action) => {
   switch (action.type) {
     case actions.CREATE_BOOK:
       return [...state, action.book];
