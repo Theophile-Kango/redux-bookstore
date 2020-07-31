@@ -12,8 +12,6 @@ const STATE = { books: initialState };
 
 const store = createStore(reducer, STATE);
 
-console.log(STATE)
-
 ReactDOM.render(
   <Provider store={store}>
     <App />
