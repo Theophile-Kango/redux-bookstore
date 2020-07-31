@@ -1,13 +1,12 @@
-import { v1 as uuidv1 } from 'uuid';
 
 export const INITIAL_STATE = [
-  { id: uuidv1(), title: 'Game of thrones', category: 'Action' },
-  { id: uuidv1(), title: 'Life story', category: 'Biography' },
-  { id: uuidv1(), title: 'Second workd wore', category: 'History' },
-  { id: uuidv1(), title: 'Vampire', category: 'Horror' },
-  { id: uuidv1(), title: 'Tintin au Congo', category: 'Kids' },
-  { id: uuidv1(), title: 'The raod to learn react', category: 'Learning' },
-  { id: uuidv1(), title: 'Mistery', category: 'Sci-Fi' },
+  { id: Math.round(1000 * Math.random()), title: 'Game of thrones', category: 'Action' },
+  { id: Math.round(1000 * Math.random()), title: 'Life story', category: 'Biography' },
+  { id: Math.round(1000 * Math.random()), title: 'Second workd wore', category: 'History' },
+  { id: Math.round(1000 * Math.random()), title: 'Vampire', category: 'Horror' },
+  { id: Math.round(1000 * Math.random()), title: 'Tintin au Congo', category: 'Kids' },
+  { id: Math.round(1000 * Math.random()), title: 'The raod to learn react', category: 'Learning' },
+  { id: Math.round(1000 * Math.random()), title: 'Mistery', category: 'Sci-Fi' },
 ];
 
 export default INITIAL_STATE;
