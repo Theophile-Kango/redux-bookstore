@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function CategoryFilter() {
+export default function CategoryFilter({ filterChange }) {
     const options = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
     return (
         <>

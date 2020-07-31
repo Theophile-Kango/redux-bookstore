@@ -5,9 +5,9 @@ export const createBook = book => ({
   book,
 });
 
-export const removeBook = book => ({
+export const removeBook = id => ({
   type: actions.REMOVE_BOOK,
-  book,
+  id,
 });
 
 export const filterBook = book => ({
