@@ -15,8 +15,8 @@ function BooksList({ books }) {
       </thead>
       <tbody>
         {
-            books.map(book => (<Book key={book.id} book={book} />))
-          }
+          books.map(book => (<Book key={book.id} book={book} />))
+        }
       </tbody>
     </table>
   );
