@@ -1,6 +1,7 @@
 import React from 'react';
-
-export default function Book({ id, title, category}) {
+import PropTypes from 'prop-types';
+export default function Book({ book }) {
+    const { id, title, category } = book;
     return (
         <tr>
             <td>{id}</td>
@@ -9,4 +10,10 @@ export default function Book({ id, title, category}) {
         </tr>
     )
 }
+
+Book.propTypes = {
+    id: PropTypes.number,
+    title: PropTypes.string,
+    category: PropTypes.string,
+}.isRequired;
 
