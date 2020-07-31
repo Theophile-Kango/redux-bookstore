@@ -1,8 +1,12 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import PropTypes from 'prop-types';
+import { createBook } from './../actions/index';
 
-export default class BooksForm extends Component{
+class BooksForm extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -12,14 +16,35 @@ export default class BooksForm extends Component{
   }
 
   handleChange = (event) => {
+    event.preventDefault();
     const {name, value} = event.target;
     this.setState({[name]: value});
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const { title, category } = this.state;
+    const { createBook } = this.props;
+    const book = {
+      id: uuidv4(),
+      title,
+      category,
+    }
+
+    if (title && category) {
+      createBook(book);
+      this.setState({ 
+        title: '',
+        category: '' 
+      });
+      
+    }
   }
   
   render(){
     const options = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <label htmlFor="title">Book Title</label>
         <input 
           id="title" 
@@ -46,3 +71,14 @@ export default class BooksForm extends Component{
     );
   }
 }
+
+
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = dispatch => ({
+  createBook: book => dispatch(createBook(book)),
+});
+
+export default connect(null, mapDispatchToProps)(BooksForm);
