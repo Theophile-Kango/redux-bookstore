@@ -1,7 +1,20 @@
-import { CHANGE_FILTER } from '../constants/ActionTypes';
+import { CHANGE_FILTER } from './actionTypes';
 
 const filter = (state = 'All', action) => {
-  action.type === CHANGE_FILTER ? raction.category : state;
+  switch (action.type) {
+    case CHANGE_FILTER:
+      return action.category;
+    default:
+      return state;
+  }
 };
 
-export default filter;
+const filterBooks = (filter, books) => {
+  if (filter !== 'All') {
+    const filtered = books.filter(book => book.category === filter);
+    return filtered;
+  }
+  return books;
+};
+
+export {filter, filterBooks};

@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function CategoryFilter({ filterChange }) {
+export default function CategoryFilter({ handleFilterChange }) {
     const options = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+    
     return (
         <>
-            <h3>Filter by</h3>
-            <select onChange={filterChange}>
+            <span>Filter by</span>
+            <select onChange={handleFilterChange}>
                 {options.map(option => (<option key={option}>{option}</option>))}
             </select>
         </>
