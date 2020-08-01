@@ -17,4 +17,4 @@ const filterBooks = (filter, books) => {
   return books;
 };
 
-export {filter, filterBooks};
+export { filter, filterBooks };

@@ -4,9 +4,11 @@ import { connect } from 'react-redux';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
 import { removeBook, filterBook } from '../actions/index';
-import { filterBooks } from './../reducers/filter';
+import { filterBooks } from '../reducers/filter';
 
-function BooksList({ books, filter, removeBook, handleFilterChange, }) {
+function BooksList({
+  books, filter, removeBook, handleFilterChange,
+}) {
   return (
     <div>
       <CategoryFilter handleFilterChange={handleFilterChange} />
@@ -22,14 +24,14 @@ function BooksList({ books, filter, removeBook, handleFilterChange, }) {
         <tbody>
           {
              filterBooks(filter, books).map(book => (
-              <Book
-                key={book.id}
-                id={book.id}
-                title={book.title}
-                category={book.category}
-                removeBook={removeBook}
-              />
-            ))
+               <Book
+                 key={book.id}
+                 id={book.id}
+                 title={book.title}
+                 category={book.category}
+                 removeBook={removeBook}
+               />
+             ))
           }
         </tbody>
       </table>
