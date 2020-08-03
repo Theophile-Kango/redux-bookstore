@@ -21,7 +21,15 @@ const Container = styled.div`
   align-items: center;
   border-bottom: 1px solid #ccc;
 `;
-export default function CategoryFilter({ handleFilterChange }) {
+
+export const input = {
+  fontSize: '13px',
+  padding: '10px',
+  borderRadius: '5px',
+  border: '1px solid #ccc',
+  outline: 'none',
+}
+export function CategoryFilter({ handleFilterChange }) {
   const options = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const filterChange = useCallback(event => {
     handleFilterChange(event.target.value);
@@ -31,7 +39,7 @@ export default function CategoryFilter({ handleFilterChange }) {
       <Title>Bookstore CMS</Title>
       <Categories style={{ color: '#121212', }}>books</Categories>
       <Categories style={{ marginRight: '20px', }}>categories</Categories>
-      <select onChange={filterChange}>
+      <select style={input} onChange={filterChange}>
         {options.map(option => (<option style={{ fontSize: '15px', }} key={option}>{option}</option>))}
       </select>
     </Container>
