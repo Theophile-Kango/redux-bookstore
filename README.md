@@ -7,7 +7,8 @@ The front-end of an application that can help to organize and manage the booksto
 
 ## Screenshot
 
-![bookstore](https://user-images.githubusercontent.com/49276315/89198950-31844800-d5ae-11ea-8b05-a299b8c123af.png)
+![bookstore](https://user-images.githubusercontent.com/49276315/89208104-0acd0e00-d5bc-11ea-8cb5-1678c036751f.png)
+
 
 ## Live Demo
 
