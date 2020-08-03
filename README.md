@@ -5,6 +5,10 @@
 
 The front-end of an application that can help to organize and manage the bookstore. It is fast, dynamic and responsive to actions and build with React & Redux.
 
+## Screenshot
+
+![bookstore](https://user-images.githubusercontent.com/49276315/89198950-31844800-d5ae-11ea-8b05-a299b8c123af.png)
+
 ## Live Demo
 
 [Click here](https://redux-bookstore.netlify.app/)
