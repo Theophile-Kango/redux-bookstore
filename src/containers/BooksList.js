@@ -5,6 +5,7 @@ import Book from '../components/Book';
 import { CategoryFilter } from '../components/CategoryFilter';
 import { removeBook, filterBook } from '../actions/index';
 import { filterBooks } from '../reducers/filter';
+
 function BooksList({
   books, filter, removeBook, handleFilterChange,
 }) {
@@ -12,7 +13,7 @@ function BooksList({
     <div>
       <CategoryFilter handleFilterChange={handleFilterChange} />
       <div>
-          {
+        {
              filterBooks(filter, books).map(book => (
                <Book
                  key={book.id}

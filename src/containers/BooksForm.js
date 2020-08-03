@@ -9,11 +9,11 @@ import { input } from '../components/CategoryFilter';
 const Form = styled.form`
   margin: 30px 100px;
   border-top: 1px solid #ccc;
-`
+`;
 const FormContent = styled.div`
   display: flex;
   justify-content: space-between;
-`
+`;
 
 const Button = styled.button`
   background: #0290ff;
@@ -24,18 +24,19 @@ const Button = styled.button`
   padding: 10px;
   border: none;
   outline: none;
-`
+  cursor: pointer;
+`;
 
 const seclect = {
   ...input,
   width: '500px',
-}
+};
 
 const formTitle = {
   fontSize: '20px',
   color: '#ccc',
   textTransform: 'uppercase',
-}
+};
 class BooksForm extends Component {
   constructor(props) {
     super(props);

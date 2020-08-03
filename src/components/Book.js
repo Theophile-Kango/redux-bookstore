@@ -23,7 +23,7 @@ const Button = styled.button`
   cursor: pointer;
   border-right: 1px solid #ccc;
   outline: none;
-`
+`;
 
 const Circle = styled.div`
   width: 68px;
@@ -32,7 +32,7 @@ const Circle = styled.div`
   border-radius: 50%;
   border-right: 5px solid #ccc;
   margin-top: 10px;
-`
+`;
 
 const Completed = styled.p`
   fontFamily: 'Montserrat';
@@ -40,23 +40,23 @@ const Completed = styled.p`
   display: flex;
   flex-direction: column;
   font-size: 32px;
-`
+`;
 const currentChapter = {
   textTransform: 'uppercase',
   fontSize: '13px',
   color: '#ccc',
-}
+};
 
 const categoryStyle = {
   fontFamily: 'Montserrat',
   color: '#121212',
-  fontWeight: 'bold'
-}
+  fontWeight: 'bold',
+};
 
 const completedStyle = {
   fontSize: '14px',
-  color: '#ccc'
-}
+  color: '#ccc',
+};
 
 const updated = {
   background: '#0290ff',
@@ -64,8 +64,8 @@ const updated = {
   color: 'white',
   textTransform: 'uppercase',
   borderRadius: '5px',
-  padding: '10px'
-}
+  padding: '10px',
+};
 
 export default function Book({
   id, title, category, removeBook,
@@ -75,17 +75,20 @@ export default function Book({
       <div>
         <p style={categoryStyle}>{category}</p>
         <p>{title}</p>
-        <Button style={{paddingLeft: '0'}}>Comment</Button>
+        <Button style={{ paddingLeft: '0' }}>Comment</Button>
         <Button type="button" onClick={() => removeBook(id)}>Remove</Button>
-        <Button style={{borderRight: 'none'}}>Edit</Button>
+        <Button style={{ borderRight: 'none' }}>Edit</Button>
       </div>
       <div>
         <Circle />
-        <Completed>75% <span style={completedStyle}>Completed</span></Completed>
+        <Completed>
+          75%
+          <span style={completedStyle}>Completed</span>
+        </Completed>
       </div>
-      <div style={{fontFamily: 'Roboto Slab'}}>
+      <div style={{ fontFamily: 'Roboto Slab' }}>
         <h3 style={currentChapter}>current chapter</h3>
-        <p style={{fontWeight: 'normal'}}>Chapter 10</p>
+        <p style={{ fontWeight: 'normal' }}>Chapter 10</p>
         <Button style={updated}>Update Progress</Button>
       </div>
     </Section>

@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
-
 const Categories = styled.h3`
   color: #ccc;
   text-transform: uppercase;
@@ -29,7 +28,7 @@ const Main = styled.div`
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
-`
+`;
 
 const User = styled.div`
   width: 45px;
@@ -39,7 +38,7 @@ const User = styled.div`
   align-items: center;
   border: 1px solid #ccc;
   border-radius: 50%;
-`
+`;
 
 export const input = {
   fontSize: '13px',
@@ -47,12 +46,12 @@ export const input = {
   borderRadius: '5px',
   border: '1px solid #ccc',
   outline: 'none',
-}
+};
 
 const avatar = {
   color: '#0290ff',
   fontSize: '17px',
-}
+};
 export function CategoryFilter({ handleFilterChange }) {
   const options = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const filterChange = useCallback(event => {
@@ -60,12 +59,12 @@ export function CategoryFilter({ handleFilterChange }) {
   }, [handleFilterChange]);
   return (
     <Main>
-       <Container>
+      <Container>
         <Title>Bookstore CMS</Title>
-        <Categories style={{ color: '#121212', }}>books</Categories>
-        <Categories style={{ marginRight: '20px', }}>categories</Categories>
+        <Categories style={{ color: '#121212' }}>books</Categories>
+        <Categories style={{ marginRight: '20px' }}>categories</Categories>
         <select style={input} onChange={filterChange}>
-          {options.map(option => (<option style={{ fontSize: '15px', }} key={option}>{option}</option>))}
+          {options.map(option => (<option style={{ fontSize: '15px' }} key={option}>{option}</option>))}
         </select>
       </Container>
       <User>
