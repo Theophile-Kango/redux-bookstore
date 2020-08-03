@@ -9,3 +9,8 @@ export const removeBook = id => ({
   type: actions.REMOVE_BOOK,
   id,
 });
+
+export const filterBook = category => ({
+  type: actions.CHANGE_FILTER,
+  category,
+});
