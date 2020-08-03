@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
-import CategoryFilter from '../components/CategoryFilter';
+import { CategoryFilter } from '../components/CategoryFilter';
 import { removeBook, filterBook } from '../actions/index';
 import { filterBooks } from '../reducers/filter';
 
@@ -12,17 +12,8 @@ function BooksList({
   return (
     <div>
       <CategoryFilter handleFilterChange={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Remove book</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
+      <div>
+        {
              filterBooks(filter, books).map(book => (
                <Book
                  key={book.id}
@@ -33,8 +24,7 @@ function BooksList({
                />
              ))
           }
-        </tbody>
-      </table>
+      </div>
     </div>
   );
 }
