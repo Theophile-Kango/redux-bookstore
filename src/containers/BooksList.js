@@ -15,7 +15,6 @@ function BooksList({
       <table>
         <thead>
           <tr>
-            <th>Id</th>
             <th>Title</th>
             <th>Category</th>
             <th>Remove book</th>

@@ -6,7 +6,6 @@ export default function Book({
 }) {
   return (
     <tr>
-      <td>{id}</td>
       <td>{title}</td>
       <td>{category}</td>
       <td><button type="button" onClick={() => removeBook(id)}>Remove</button></td>
