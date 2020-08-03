@@ -5,22 +5,13 @@ import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
 import { removeBook, filterBook } from '../actions/index';
 import { filterBooks } from '../reducers/filter';
-
 function BooksList({
   books, filter, removeBook, handleFilterChange,
 }) {
   return (
     <div>
       <CategoryFilter handleFilterChange={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Remove book</th>
-          </tr>
-        </thead>
-        <tbody>
+      <div>
           {
              filterBooks(filter, books).map(book => (
                <Book
@@ -32,8 +23,7 @@ function BooksList({
                />
              ))
           }
-        </tbody>
-      </table>
+      </div>
     </div>
   );
 }
