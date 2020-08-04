@@ -1,4 +1,5 @@
-import { v4 as uuidv4 } from 'uuid';
+
+import data from './../api/bookData';
 
 export const INITIAL_STATE = [
   { id: uuidv4(), title: 'Game of thrones', category: 'Action' },
@@ -9,5 +10,5 @@ export const INITIAL_STATE = [
   { id: uuidv4(), title: 'The raod to learn react', category: 'Learning' },
   { id: uuidv4(), title: 'Mistery', category: 'Sci-Fi' },
 ];
-
+console.log(data.getData())
 export default INITIAL_STATE;
